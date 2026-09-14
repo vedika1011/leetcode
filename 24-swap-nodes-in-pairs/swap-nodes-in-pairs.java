@@ -16,11 +16,11 @@ class Solution {
         ListNode curr=prev.next;
         while(curr!=null && curr.next!=null){
             ListNode first=curr;
-            ListNode second=curr.next;
-            prev.next=second;
+            ListNode second=curr.next; //prev->first->second->next pair
+            prev.next=second; //swapping first and second
             first.next=second.next;
             second.next=first;
-            prev=first;
+            prev=first; //move prev and curr fwd
             curr=first.next;
         }
         return dummy.next;
