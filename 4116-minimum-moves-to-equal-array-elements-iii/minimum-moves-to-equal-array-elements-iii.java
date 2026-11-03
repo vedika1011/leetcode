@@ -7,9 +7,7 @@ class Solution {
             if(nums[i]>max){
                 max=nums[i];
             }
-            
         }
-        
         return max*nums.length-sum;
     }
 }
